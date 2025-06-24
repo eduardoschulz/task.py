@@ -5,7 +5,7 @@ from textual.containers import Vertical
 
 
 class TodoApp(App):
-    CSS_PATH = "task_py/styles/app.tcss"
+    CSS_PATH = "styles/app.tcss"
 
     def compose(self):
         yield Vertical()
