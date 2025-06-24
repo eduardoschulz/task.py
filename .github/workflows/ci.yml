@@ -27,7 +27,7 @@ jobs:
 
     - name: Lint with ruff
       run: |
-        ruff task_py
+        ruff check task_py
     - name: Check formatting with black
       run: |
         black --check task_py
