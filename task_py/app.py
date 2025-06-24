@@ -9,5 +9,8 @@ class TodoApp(App):
     CSS_PATH = "styles/app.tcss"
 
     def compose(self):
-        yield Vertical()
-        yield TaskWidget()
+        with Vertical():
+            yield TaskWidget()
+            yield TaskWidget()
+            yield TaskWidget()
+            yield TaskWidget()

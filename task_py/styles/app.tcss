@@ -1,5 +1,22 @@
+TaskWidget {
+   align: center middle;
+   layout: horizontal;
+   background: $boost;
+   height: 7;
+}
+
 Button {
-    
-    background: red;
+    dock: left;   
+    padding: 1;
+    margin: 1;
+    height: 5;
+    width: 20;
+}
+
+Label {
+    align: left middle;
 
 }
+
+
+
