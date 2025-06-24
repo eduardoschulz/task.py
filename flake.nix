@@ -22,6 +22,7 @@
                 python313Packages.textual-dev
                 python313Packages.black
                 python313Packages.ruff
+                python313Packages.pytest
             ];
             
             shellHook = ''
