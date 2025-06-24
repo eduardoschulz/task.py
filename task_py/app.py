@@ -1,5 +1,6 @@
 from textual.app import App
 from textual.containers import Vertical
+from task_py.components.task import TaskWidget
 
 # uso futuro from task_py.components.task import Task
 
@@ -9,3 +10,4 @@ class TodoApp(App):
 
     def compose(self):
         yield Vertical()
+        yield TaskWidget()
