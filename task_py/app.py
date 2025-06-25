@@ -1,6 +1,6 @@
 from textual.app import App
 from textual.containers import Vertical, Middle, Container
-from task_py.components.add_task import AddTask
+from task_py.components.addtask import AddTask
 from task_py.components.task import TaskWidget
 from textual.widgets import Footer
 
@@ -10,17 +10,8 @@ from textual.widgets import Footer
 class TodoApp(App):
     CSS_PATH = "styles/app.tcss"
     BINDINGS = [
-        ("b", "ring_bell", "ring"),
-        ("o", "openmenu", "Open/Close Menu") # Added this line
+        ("o", "open_menu", "Open/Close Menu") # Added this line
     ]
-     
-    
-    def action_ring_bell(self):
-        self.bell()
-
-
-    
-
     def compose(self):
         yield AddTask(id="addtask", classes="hidden")
         yield Vertical(
@@ -28,9 +19,11 @@ class TodoApp(App):
             id="task-list"
         )
 
-    def action_openmenu(self):
+    #TODO descobrir pq nao aparece/ ele ta chegando aq
+    def action_open_menu(self): 
         menu = self.query_one("#addtask")
-        menu.toggle_class("hidden")
+        menu.remove_class("hidden")
+        self.bell()
 
     def on_mount(self) -> None:
         self.query_one(Vertical).focus()
