@@ -5,7 +5,37 @@ TaskWidget {
    height: 7;
 }
 
-Button {
+Screen{
+    align: center middle;
+}
+
+#add-task-widget {
+    
+    width: 40;
+    height: 11;
+    padding: 1 5;
+    background: $panel;
+    border: $secondary tall;
+    content-align: center middle;
+}
+#add-task-hidden {
+
+    display: none;
+}
+
+
+#add-task {
+    dock: bottom;
+    width: 30;
+    height: 3;
+}
+#input-add {
+    dock: top;
+    width: 28;
+    height: 3;
+}
+
+#btn-done {
     dock: left;   
     padding: 1;
     margin: 1;
