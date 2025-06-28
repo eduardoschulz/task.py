@@ -9,7 +9,7 @@ Screen{
     align: center middle;
 }
 
-#add-task-widget {
+AddTask {
     
     width: 40;
     height: 11;
@@ -18,11 +18,10 @@ Screen{
     border: $secondary tall;
     content-align: center middle;
 }
-#add-task-hidden {
 
+.hidden {
     display: none;
 }
-
 
 #add-task {
     dock: bottom;
